@@ -1,6 +1,6 @@
 // Write your JS code here
 import {Link} from 'react-router-dom'
-import 'index.css'
+import './index.css'
 
 const BlogItem = props => {
   const {blogItemDetails} = props
