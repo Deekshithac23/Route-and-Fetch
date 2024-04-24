@@ -28,19 +28,22 @@ class BlogList extends Component {
   }
 
   render() {
-    ;<div className="blogs-list-container">
-      {isLoading ? (
-        <div testid="loader">
-          <Loader type="TailSpin" color="#00bfff" height={50} width={50} />
-        </div>
-      ) : (
-        <ul className="blogs-list">
-          {blogsData.map(eachBlog => (
-            <BlogItem key={eachBlog.id} blogItemDetails={eachBlog} />
-          ))}
-        </ul>
-      )}
-    </div>
+    const {blogsData, isLoading} = this.state
+    return (
+      <div className="blogs-list-container">
+        {isLoading ? (
+          <div testid="loader">
+            <Loader type="TailSpin" color="#00bfff" height={50} width={50} />
+          </div>
+        ) : (
+          <ul className="blogs-list">
+            {blogsData.map(eachBlog => (
+              <BlogItem key={eachBlog.id} blogItemDetails={eachBlog} />
+            ))}
+          </ul>
+        )}
+      </div>
+    )
   }
 }
 
