@@ -52,11 +52,11 @@ class BlogItemDetails extends Component {
     const {isLoading} = this.state
     return (
       <div className="blog-container">
-        (isLoading ? (
+      {isLoading ? (
         <div testid="loader">
           <Loader type="TailSpin" color="#00bfff" height={50} width={50} />
         </div>
-        ) :( this.renderBlogItemDetails() ) )
+        ) :( this.renderBlogItemDetails() ) }
       </div>
     )
   }
