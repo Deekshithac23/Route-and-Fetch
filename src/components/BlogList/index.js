@@ -9,7 +9,7 @@ import './index.css'
 class BlogList extends Component {
   state = {isLoading: true, blogsData: []}
 
-  ComponentDidMount() {
+  componentDidMount() {
     this.getBlogsData()
   }
 
@@ -32,7 +32,7 @@ class BlogList extends Component {
     return (
       <div className="blogs-list-container">
         {isLoading ? (
-          <div testid="loader">
+          <div data-testid="loader">
             <Loader type="TailSpin" color="#00bfff" height={50} width={50} />
           </div>
         ) : (
